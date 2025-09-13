@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="movimientos_caja.movimientos_caja_view_account_invoice_line_tree_view">
+            <field name="name">movimientos_caja.movimientos_caja_</field>
+        </record>
+    </data>
+</odoo>

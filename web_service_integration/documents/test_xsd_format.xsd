@@ -1,0 +1,743 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="GFACE_Web" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="GFACE_Web">
+    <xs:element name="stdTWS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:stdTWS.stdTWSCIt">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">INICIO DEL DOCUMENTO [CABECERA]</xs:documentation>
+			</xs:annotation>
+		</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:TrnLotNum" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TipTrnCod" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnNum" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnFec" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnBenConNIT" minOccurs="1" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnEFACECliCod" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnEFACECliNom" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnEFACECliDir" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnObs" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnEMail" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPAutResNum" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPTipTrnCod" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPSerie" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPDispElec" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPYear" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TDFEPNum" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:MonCod" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnTasCam" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd01" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd02" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd03" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd04" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd05" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd06" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd07" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd08" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd09" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd10" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd11" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd12" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd13" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd14" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd15" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd16" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd17" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd18" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd19" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd20" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd21" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd22" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd23" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd24" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd25" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd26" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd27" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd28" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd29" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd30" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnPaisCod" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnUltLinD" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:stdTWSD" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:stdTWSIA" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnLotNum">
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="99999999999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TipTrnCod" type="ns1:TipTrn">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">TIPO DE TRANSACCIÓN</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnNum">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">NÚMERO DE TRANSACCIÓN</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="9999999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnFec">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">FECHA DE LA TRANSACCIÓN</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="((19|20)\d\d)-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">Formato YYYY-mm-dd 2017-12-31</xs:documentation>
+				</xs:annotation>
+			</xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnBenConNIT">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">NIT del Cliente del EFACE. Si es consumidor final "CF"</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="20"/>
+			<xs:pattern value="(([1-9])+([0-9])*(-?)([0-9]|K))|(([1-9]+[0-9]){12,13})|(CF)|(EXP)|(EXPO)"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnEFACECliCod">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">Código del cliente si el NIT del cliente es CF o EXPO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnEFACECliNom">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">Nombre del cliente si el NIT del cliente es CF o EXPO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnEFACECliDir">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">Dirección del cliente si el NIT del cliente es CF o EXPO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnObs">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">OBSERVACIONES</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="400"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnEMail">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CORREO ELECTRÓNICO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TDFEPAutResNum">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">RESOLUCIÓN DE FACTURA A LA QUE SE LE VA A APLICAR LA NCE/NDE</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TDFEPTipTrnCod" type="ns1:TipTrn">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">TIPO DE TRANSACIÓN DE FACTURA A LA QUE SE LE VA A APLICAR LA NCE/NDE</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TDFEPSerie">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">SERIE DE LA RESOLUCION DE LA FACTURA A LA QUE SE LE VA A APLICAR LA NCE/NDE</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TDFEPDispElec">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">DISPOSITIVO ELECTRÓNICO DE LA RESOLUCION DE LA FACTURA A LA QUE SE LE VA A APLICAR LA NCE/NDE. EJEMPLO: 001</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TDFEPYear">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">AÑO DE LA FACTURA A LA QUE SE LE VA A APLICAR LA NCE/NDE</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="2100"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TDFEPNum">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">NÚMERO DE LA FACTURA A LA QUE SE LE VA A APLIAR LA NCE/NDE</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="MonCod" type="ns1:Monedas">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">MONEDA</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnTasCam">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">TIPO DE CAMBIO DE LA MONEDA</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnCampAd01" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 1</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd02" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 2</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd03" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 3</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd04" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 4</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd05" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 5</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd06" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 6</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd07" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 7</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd08" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 8</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd09" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 9</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd10" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 10</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd11" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 11</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd12" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 12</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd13" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 13</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd14" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 14</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd15" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 15</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd16" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 16</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd17" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 17</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd18" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 18</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd19" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 19</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd20" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 20</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd21" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 21</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd22" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 22</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd23" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 23</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd24" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 24</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd25" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 25</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd26" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 26</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd27" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 27</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd28" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 28</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd29" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 29</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnCampAd30" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 30</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnPaisCod">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">PAIS DE DESTINO. EJEMPLO: GUATEMALA</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnUltLinD">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">NÚMERO DE LA ULTIMA LINEA DEL ARTICULO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="stdTWSD">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">DETALLE DE LA FACTURA/LISTA DE ARTÍCULOS</xs:documentation>
+	</xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="ns1:stdTWS.stdTWSCIt.stdTWSDIt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt.stdTWSDIt">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">DETALLE DE LA FACTURA/ITEM DE LA FACTURA</xs:documentation>
+	</xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element ref="ns1:TrnLiNum" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnArtCod" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnArtNom" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCan" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnVUn" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnUniMed" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnVDes" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnArtBienSer" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnArtExcento" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnDetCampAd01" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnDetCampAd02" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnDetCampAd03" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnDetCampAd04" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnDetCampAd05" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnLiNum">
+	<xs:annotation>
+		<xs:documentation>NÚMERO DE LA LÍNEA</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnArtCod">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CÓDIGO DEL ARTÍCULO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="0"/>
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnArtNom">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">NOMBRE DEL ARTÍCULO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="1500"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnCan">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CANTIDAD DE ARTÍCULOS</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnVUn">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">VALOR UNITARIO DEL ARTÍCULO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.000001"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnUniMed">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">UNIDAD DE MEDIDA. EJEMPLO: LIBRAS, LTS, UNIDAD ...</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnVDes">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">VALOR DE DESCUENTO DEL ARTÍCULO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnArtBienSer">
+	<xs:annotation>
+		<xs:documentation>BIEN Ó SERVICIO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">BIEN</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">SERVICIO</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnArtExcento">
+  <xs:annotation>
+		<xs:documentation>ARTÍCULO EXENTO DE IVA</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">NO EXENTO DE IVA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">EXENTO DE IVA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnDetCampAd01" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 1</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnDetCampAd02" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 2</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnDetCampAd03" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 3</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnDetCampAd04" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 4</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="TrnDetCampAd05" type="ns1:CampoAdicional">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CAMPO ADICIONAL # 5</xs:documentation>
+	</xs:annotation>
+  </xs:element>
+  <xs:element name="stdTWSIA">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">IMPUESTOS ADICIONALES - TOTAL</xs:documentation>
+	</xs:annotation>
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="ns1:stdTWS.stdTWSCIt.stdTWSIAIt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt.stdTWSIAIt">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">IMPUESTO ADICIONAL</xs:documentation>
+	</xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:TrnImpCod" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="ns1:TrnImpValor" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnImpCod">
+	<xs:annotation>
+		<xs:documentation>CÓDIGO DEL IMPUESTO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">IVA - (SE CALCULA AUTOMATICAMENTE)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="1">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">IDP</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="3">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">IDT/INGUAT</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="5">
+				<xs:annotation>
+					<xs:documentation xml:lang="es">TIMBRE DE PRENSA</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  <xs:element name="TrnImpValor">
+	<xs:annotation>
+		<xs:documentation xml:lang="es">CALCULO DEL IMPUESTO</xs:documentation>
+	</xs:annotation>
+	<xs:simpleType>
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="0.01"/>
+		</xs:restriction>
+	</xs:simpleType>
+  </xs:element>
+  
+  <xs:simpleType name="TipTrn">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="FACE-63">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="NCE-64">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">NOTA DE CRÉDITO ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="NDE-65">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">NOTA DE DÉBITO ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-66">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA CAMBIARIA ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-67">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA COMERCIAL USUARIO ZONA FRANCA ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="NCE-71">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">NOTA DE ABONO ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-72">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA COMERCIAL DE EXPORTACIÓN ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="RED-73">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">RECIBO ELECTRÓNICO DE DONACIONES</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-74">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA ESPECIAL ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-82">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA ESPECIAL EXPORTADOR ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="FACE-83">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">FACTURA PEQUEÑO CONTRIBUYENTE ELECTRÓNICA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">SOLO PARA CUANDO DISTINTO A NOTAS Y EN EL DOCUMENTO NO LLEVA REFERENCIA</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Monedas">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="GTQ">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">QUETZAL</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="USD">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">DOLAR ESTADOUNIDENSE</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="EUR">
+			<xs:annotation>
+				<xs:documentation xml:lang="es">EURO</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CampoAdicional">
+	<xs:restriction base="xs:string">
+		<xs:minLength value="0"/>
+		<xs:maxLength value="200"/>
+	</xs:restriction>
+  </xs:simpleType>
+</xs:schema>

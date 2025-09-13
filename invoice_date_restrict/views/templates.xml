@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        
+        <record id="invoice_date_restrict_tree" model="ir.ui.view">
+            <field name="name">invoice.date.restrict.tree</field>
+            <field name="model">invoice.date.restrict</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <tree string="Períodos Contables" editable="bottom">
+                    <field name="name" invisible="1"/>
+                    <field name="date_month" required="1"/>
+                    <field name="date_year" required="1"/>
+                    <field name="bloqued"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="act_invoice_date_restrict" model="ir.actions.act_window">
+            <field name="res_model">invoice.date.restrict</field>
+            <field name="name">Períodos Contables</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="invoice_date_restrict_tree"></field>
+        </record>
+
+        <menuitem id="menu_invoice_date_restrict"
+                action="act_invoice_date_restrict"
+                parent="account.menu_finance_configuration"
+                sequence="40"/>
+
+    </data>
+</odoo>

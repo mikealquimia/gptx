@@ -1,0 +1,78 @@
+<stdTWS xmlns="GFACE_Web">
+    <stdTWS.stdTWSCIt>
+        <TrnLotNum>1</TrnLotNum>
+        <TipTrnCod>FACE-63</TipTrnCod>
+        <TrnNum />
+        <TrnFec>2018-01-23</TrnFec>
+        <TrnBenConNIT />
+        <TrnEFACECliCod>EXPO</TrnEFACECliCod>
+        <TrnEFACECliNom>Laith Jubair</TrnEFACECliNom>
+        <TrnEFACECliDir>69 rue de Namur</TrnEFACECliDir>
+        <TrnObs />
+        <TrnEMail>laith.jubair@axelor.example.com</TrnEMail>
+        <TDFEPAutResNum />
+        <TDFEPTipTrnCod />
+        <TDFEPSerie>INV/2018/0008</TDFEPSerie>
+        <TDFEPDispElec>001</TDFEPDispElec>
+        <TDFEPYear>2018</TDFEPYear>
+        <TDFEPNum>INV/2018/0008</TDFEPNum>
+        <MonCod>USD</MonCod>
+        <TrnTasCam />
+        <TrnCampAd01 />
+        <TrnCampAd02 />
+        <TrnCampAd03 />
+        <TrnCampAd04 />
+        <TrnCampAd05 />
+        <TrnCampAd06 />
+        <TrnCampAd07 />
+        <TrnCampAd08 />
+        <TrnCampAd09 />
+        <TrnCampAd10 />
+        <TrnCampAd11 />
+        <TrnCampAd12 />
+        <TrnCampAd13 />
+        <TrnCampAd14 />
+        <TrnCampAd15 />
+        <TrnCampAd16 />
+        <TrnCampAd17 />
+        <TrnCampAd18 />
+        <TrnCampAd19 />
+        <TrnCampAd20 />
+        <TrnCampAd21 />
+        <TrnCampAd22 />
+        <TrnCampAd23 />
+        <TrnCampAd24 />
+        <TrnCampAd25 />
+        <TrnCampAd26 />
+        <TrnCampAd27 />
+        <TrnCampAd28 />
+        <TrnCampAd29 />
+        <TrnCampAd30 />
+        <TrnPaisCod>BE</TrnPaisCod>
+        <stdTWSD>
+            <stdTWS.stdTWSCIt.stdTWSDIt>
+                <TrnLiNum>1</TrnLiNum>
+                <TrnArtCod>CONS_DEL02</TrnArtCod>
+                <TrnArtNom>Little server</TrnArtNom>
+                <TrnCan>1.0</TrnCan>
+                <TrnVUn>40000.0</TrnVUn>
+                <TrnUniMed>Unit(s)</TrnUniMed>
+                <TrnVDes>0.0</TrnVDes>
+                <TrnArtBienSer>0</TrnArtBienSer>
+                <TrnArtExcento>1</TrnArtExcento>
+                <TrnDetCampAd01 />
+                <TrnDetCampAd02 />
+                <TrnDetCampAd03 />
+                <TrnDetCampAd04 />
+                <TrnDetCampAd05 />
+            </stdTWS.stdTWSCIt.stdTWSDIt>
+        </stdTWSD>
+        <TrnUltLinD>1</TrnUltLinD>
+        <stdTWSIA>
+            <stdTWS.stdTWSCIt.stdTWSIAIt>
+                <TrnImpCod>Tax 15.00%</TrnImpCod>
+                <TrnImpValor>15.0</TrnImpValor>
+            </stdTWS.stdTWSCIt.stdTWSIAIt>
+        </stdTWSIA>
+    </stdTWS.stdTWSCIt>
+</stdTWS>

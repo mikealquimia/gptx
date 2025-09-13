@@ -1,0 +1,118 @@
+﻿<!-- Se debe respetar la estructura y attributos del XML. Para validar el Xml en el archivo comprimido esta
+     el archivo XSD para hacer la validacion.
+     Algunos campos que no utilizen no es obligatorio que vayan, pero algunos son obligatorios que esten aunque
+     no tengan informacion.
+     Los campos Numericos si no se utilizan se deben asignar a cero.	 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<stdTWS xmlns="GFACE_Web">
+    <stdTWS.stdTWSCIt>
+        <TrnLotNum>0</TrnLotNum><!-- 0 si no es necesario y automaticamente se le asigna uno -->
+        <TipTrnCod>FACE-63</TipTrnCod><!-- Tipo de documento FACE-63, NCE-64, NDE-65 etc., segun la serie y resolucion -->
+        <TrnNum>1</TrnNum><!-- No. de correlativo interno del GFACE, este lo pueden obtener por medio del WebService o controlar el correlativo manual-->
+        <TrnFec>2014-01-27</TrnFec><!-- Fecha de la transaccion, cuando es aprobada la transaccion se genera la fecha de la factura el dia de aprobacion, por este medio es aprobada el mismo día-->
+        <TrnBenConNIT>378890000K</TrnBenConNIT><!-- NIT del cliente, si es Consumidor Final=CF, si es exportacion=EXPO -->
+		<TrnEFACECliCod></TrnEFACECliCod><!-- Codigo cliente solo si es Consumidor Final y Exportacion -->
+		<TrnEFACECliNom></TrnEFACECliNom><!-- Nombre del cliente solo si es Consumidor Final y Exportacion -->
+		<TrnEFACECliDir></TrnEFACECliDir><!-- Direccion del cliente solo si es Consumidor Final y Exportacion -->
+        <TrnObs>Prueba WebService</TrnObs><!-- Alguna Observacion -->
+        <TrnEMail>mail1@mail.com,mail2@mail.com</TrnEMail>
+		<!--Seccion para Notas de Credito y Debito -->
+        <TDFEPAutResNum></TDFEPAutResNum><!--Numero de resolucion de la factura que se hace referencia-->
+        <TDFEPTipTrnCod></TDFEPTipTrnCod><!--Tipo de transaccion de la factura que se hace referencia FACE-63, FACE-66 etc. -->
+        <TDFEPSerie></TDFEPSerie><!--No. Serie de la factura que se hace referencia-->
+        <TDFEPDispElec></TDFEPDispElec><!--Numero de dispositivo de la factura que se hace referencia, ej. 001-->
+        <TDFEPYear>0</TDFEPYear><!--Año de la factura que se hace referencia, ej. 2014 -->
+        <TDFEPNum>0</TDFEPNum><!--Numero de la factura que se hace referencia, ej. 120-->
+		<!--NOTA: si no se va a hacer una nota, entoces los campos deberan de ir vacios en caso de ser caracteres, si son númericos debera ir un cero. -->
+		<!--Fin de la seccion de la Nota de Credito y Debito -->
+        <MonCod>GTQ</MonCod><!--Código de la moneda GTQ:Quetzales, USD:Dolar, EUR:Euro -->
+        <TrnTasCam>1</TrnTasCam><!-- Tasa de cambio si es GTQ debera ir un 1, sino el cambio de la moneda del día-->
+		<!--Campos adicionales, dejar en blanco si no se tiene ninguno habilitado
+			en el diseño de la factura -->
+        <TrnCampAd01>Algun valor</TrnCampAd01>
+        <TrnCampAd02></TrnCampAd02>
+        <TrnCampAd03></TrnCampAd03>
+        <TrnCampAd04></TrnCampAd04>
+        <TrnCampAd05></TrnCampAd05>
+        <TrnCampAd06></TrnCampAd06>
+        <TrnCampAd07></TrnCampAd07>
+        <TrnCampAd08></TrnCampAd08>
+        <TrnCampAd09></TrnCampAd09>
+        <TrnCampAd10></TrnCampAd10>
+        <TrnCampAd11></TrnCampAd11>
+        <TrnCampAd12></TrnCampAd12>
+        <TrnCampAd13></TrnCampAd13>
+        <TrnCampAd14></TrnCampAd14>
+        <TrnCampAd15></TrnCampAd15>
+        <TrnCampAd16></TrnCampAd16>
+		<TrnCampAd17></TrnCampAd17>
+		<TrnCampAd18></TrnCampAd18>
+		<TrnCampAd19></TrnCampAd19>
+		<TrnCampAd20></TrnCampAd20>
+		<TrnCampAd21></TrnCampAd21>
+		<TrnCampAd22></TrnCampAd22>
+		<TrnCampAd23></TrnCampAd23>
+		<TrnCampAd24></TrnCampAd24>
+		<TrnCampAd25></TrnCampAd25>
+		<TrnCampAd26></TrnCampAd26>
+		<TrnCampAd27></TrnCampAd27>
+		<TrnCampAd28></TrnCampAd28>
+		<TrnCampAd29></TrnCampAd29>
+		<TrnCampAd30></TrnCampAd30>
+        <TrnPaisCod></TrnPaisCod><!-- Pais destino de la factura -->
+		<TrnUltLinD>2</TrnUltLinD><!-- Total de lineas en el detalle(productos) de la factura -->
+		<!-- Seccion del detalle(Productos) de la factura -->
+        <stdTWSD>
+			<!-- Producto 1 -->
+            <stdTWS.stdTWSCIt.stdTWSDIt>
+				<TrnLiNum>1</TrnLiNum><!-- Numero de linea -->
+                <TrnArtCod>ART005</TrnArtCod><!-- Codigo del articulo -->
+                <TrnArtNom>Artículo de prueba 1</TrnArtNom><!-- Nombre del articulo -->
+                <TrnCan>200</TrnCan>
+                <TrnVUn>50.00</TrnVUn>
+                <TrnUniMed>UNIDAD</TrnUniMed>
+                <TrnVDes>0.00</TrnVDes>
+                <TrnArtBienSer>0</TrnArtBienSer>
+                <TrnArtExcento>0</TrnArtExcento>
+                <TrnDetCampAd01></TrnDetCampAd01>
+                <TrnDetCampAd02></TrnDetCampAd02>
+                <TrnDetCampAd03></TrnDetCampAd03>
+                <TrnDetCampAd04></TrnDetCampAd04>
+                <TrnDetCampAd05></TrnDetCampAd05>
+            </stdTWS.stdTWSCIt.stdTWSDIt>
+			<!-- Fin producto 1 -->
+			<!-- Producto 2 -->
+            <stdTWS.stdTWSCIt.stdTWSDIt>
+				<TrnLiNum>2</TrnLiNum>
+                <TrnArtCod>ART008</TrnArtCod>
+                <TrnArtNom>Segundo artículo de prueba</TrnArtNom>
+                <TrnCan>500</TrnCan>
+                <TrnVUn>20.51</TrnVUn>
+                <TrnUniMed>UNIDAD</TrnUniMed>
+                <TrnVDes>0.00</TrnVDes>
+                <TrnArtBienSer>0</TrnArtBienSer>
+                <TrnArtExcento>0</TrnArtExcento>
+                <TrnDetCampAd01></TrnDetCampAd01>
+                <TrnDetCampAd02></TrnDetCampAd02>
+                <TrnDetCampAd03></TrnDetCampAd03>
+                <TrnDetCampAd04></TrnDetCampAd04>
+                <TrnDetCampAd05></TrnDetCampAd05>
+            </stdTWS.stdTWSCIt.stdTWSDIt>
+			<!-- Fin producto 2 -->
+        </stdTWSD>
+		<!-- Seccion Impuestos Adicionales
+			 2. IDP
+			 3. INGUAT
+			 4. Tasa/Arb. Municipal
+			 5. Timbre de prensa
+			 Para poder utilizarlo se debe solicitar habilitarlos -->
+        <stdTWSIA><!-- sino lleva ningun impuesto adicional, esta estiqueta siempre debera de ir -->
+			<!-- Impuesto IDP -->
+			<stdTWS.stdTWSCIt.stdTWSIAIt>
+				<TrnImpCod>2</TrnImpCod>
+				<TrnImpValor>1.111</TrnImpValor>
+			</stdTWS.stdTWSCIt.stdTWSIAIt>
+			<!-- Fin de impuesto IDP -->
+        </stdTWSIA>
+    </stdTWS.stdTWSCIt>
+</stdTWS>

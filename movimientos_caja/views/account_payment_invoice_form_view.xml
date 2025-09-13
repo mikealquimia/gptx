@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+        <!--Se agrega el campo de numero de deposito-->
+
+        <record model="ir.ui.view" id="movimientos_caja.movimientos_caja_view_account_payment_invoice_form_view">
+            <field name="name">movimientos_caja.movimientos_caja_view_account_payment_deposit_number</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_invoice_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="journal_id" position="after">
+                    <field name="deposit_number" store="True" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

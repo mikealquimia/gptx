@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="ach_sale_order_report">
+            <field name="name">ACH Second Salesman</field>
+            <field name="inherit_id" ref="sale.report_saleorder_document" />
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='informations']" position="inside">
+                    <div t-if="doc.user_id.name" class="col-xs-3">
+                        <strong>Second Salesman:</strong>
+                        <p t-field="doc.second_salesman"/>
+                        <p t-field="doc.second_salesman.partner_id.mobile"/>
+                        <p t-field="doc.second_salesman.partner_id.email"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

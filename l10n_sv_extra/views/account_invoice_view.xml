@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--Se agrega el campo PEQUEÑO CONTRIBUYENTE -->
+        <record model="ir.ui.view" id="l10n_sv_extra.l10n_sv_extra_view_account_invoice_form">
+            <field name="name">l10n_sv_extra.l10n_sv_extra_view_account_invoice_form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="amount_tax" position="after">
+                    <field name="user_country_id" invisible="1" />                    
+                    <field name="tax_withold_amount" attrs="{'invisible':[('user_country_id','!=','SV')]}"></field>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

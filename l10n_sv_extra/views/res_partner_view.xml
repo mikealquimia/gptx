@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+
+        <!--Se agrega el campo PEQUEÑO CONTRIBUYENTE -->
+        <record model="ir.ui.view" id="l10n_sv_extra.l10n_sv_extra_view_res_partner_form">
+            <field name="name">l10n_sv_extra.l10n_sv_extra_view_res_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <field name="vat" position="after">
+                    <field name="user_country_id" invisible="1" />
+                    <field name="contact_dui" attrs="{'invisible':[('user_country_id','!=','SV')]}"></field>
+                    <field name="contact_nrc" attrs="{'invisible':[('user_country_id','!=','SV')]}"></field>
+                    <field name="type_taxpayer" attrs="{'invisible':[('user_country_id','!=','SV')]}"></field>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

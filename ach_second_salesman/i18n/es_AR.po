@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ach_second_salesman
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-03 03:45+0000\n"
+"PO-Revision-Date: 2023-06-02 21:53-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"Language: es_GT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: ach_second_salesman
+#: model_terms:ir.ui.view,arch_db:ach_second_salesman.ach_sale_order_report
+msgid "<strong>Second Salesman:</strong>"
+msgstr "<strong>Compartido con:</strong>"
+
+#. module: ach_second_salesman
+#: model:ir.model,name:ach_second_salesman.model_sale_order
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+#. module: ach_second_salesman
+#: model:ir.model.fields,field_description:ach_second_salesman.field_sale_order__second_salesman
+msgid "Second Salesman"
+msgstr "Compartido con"

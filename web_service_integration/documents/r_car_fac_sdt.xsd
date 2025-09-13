@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="GFACE_Web" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="GFACE_Web">
+    <xs:element name="stdTWS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:stdTWS.stdTWSCIt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:TrnLotNum"/>
+        <xs:element ref="ns1:TipTrnCod"/>
+        <xs:element ref="ns1:TrnNum"/>
+        <xs:element ref="ns1:TrnFec"/>
+        <xs:element ref="ns1:TrnBenConNIT"/>
+		<xs:element ref="ns1:TrnEFACECliCod"/>
+		<xs:element ref="ns1:TrnEFACECliNom"/>
+		<xs:element ref="ns1:TrnEFACECliDir"/>
+        <xs:element ref="ns1:TrnObs"/>
+        <xs:element ref="ns1:TrnEMail"/>
+        <xs:element ref="ns1:TDFEPAutResNum"/>
+        <xs:element ref="ns1:TDFEPTipTrnCod"/>
+        <xs:element ref="ns1:TDFEPSerie"/>
+        <xs:element ref="ns1:TDFEPDispElec"/>
+        <xs:element ref="ns1:TDFEPYear"/>
+        <xs:element ref="ns1:TDFEPNum"/>
+        <xs:element ref="ns1:MonCod"/>
+        <xs:element ref="ns1:TrnTasCam"/>
+        <xs:element ref="ns1:TrnCampAd01" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd02" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd03" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd04" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd05" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd06" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd07" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd08" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd09" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd10" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd11" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd12" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd13" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd14" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd15" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnCampAd16" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd17" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd18" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd19" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd20" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd21" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd22" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd23" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd24" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd25" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd26" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd27" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd28" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd29" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="ns1:TrnCampAd30" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="ns1:TrnPaisCod"/>
+		<xs:element ref="ns1:TrnUltLinD"/>
+        <xs:element ref="ns1:stdTWSD"/>
+        <xs:element ref="ns1:stdTWSIA"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnLotNum" type="xs:integer"/>
+  <xs:element name="TipTrnCod" type="xs:string"/>
+  <xs:element name="TrnNum" type="xs:integer"/>
+  <xs:element name="TrnFec" type="xs:date"/>
+  <xs:element name="TrnBenConNIT" type="xs:string"/>
+  <xs:element name="TrnEFACECliCod" type="xs:string"/>
+  <xs:element name="TrnEFACECliNom" type="xs:string"/>
+  <xs:element name="TrnEFACECliDir" type="xs:string"/>
+  <xs:element name="TrnObs" type="xs:string"/>
+  <xs:element name="TrnEMail" type="xs:string"/>
+  <xs:element name="TDFEPAutResNum" type="xs:string"/>
+  <xs:element name="TDFEPTipTrnCod" type="xs:string"/>
+  <xs:element name="TDFEPSerie" type="xs:string"/>
+  <xs:element name="TDFEPDispElec" type="xs:string"/>
+  <xs:element name="TDFEPYear" type="xs:integer"/>
+  <xs:element name="TDFEPNum" type="xs:integer"/>
+  <xs:element name="MonCod" type="xs:string"/>
+  <xs:element name="TrnTasCam" type="xs:decimal"/>
+  <xs:element name="TrnCampAd01" type="xs:string"/>
+  <xs:element name="TrnCampAd02" type="xs:string"/>
+  <xs:element name="TrnCampAd03" type="xs:string"/>
+  <xs:element name="TrnCampAd04" type="xs:string"/>
+  <xs:element name="TrnCampAd05" type="xs:string"/>
+  <xs:element name="TrnCampAd06" type="xs:string"/>
+  <xs:element name="TrnCampAd07" type="xs:string"/>
+  <xs:element name="TrnCampAd08" type="xs:string"/>
+  <xs:element name="TrnCampAd09" type="xs:string"/>
+  <xs:element name="TrnCampAd10" type="xs:string"/>
+  <xs:element name="TrnCampAd11" type="xs:string"/>
+  <xs:element name="TrnCampAd12" type="xs:string"/>
+  <xs:element name="TrnCampAd13" type="xs:string"/>
+  <xs:element name="TrnCampAd14" type="xs:string"/>
+  <xs:element name="TrnCampAd15" type="xs:string"/>
+  <xs:element name="TrnCampAd16" type="xs:string"/>
+  <xs:element name="TrnCampAd17" type="xs:string"/>
+  <xs:element name="TrnCampAd18" type="xs:string"/>
+  <xs:element name="TrnCampAd19" type="xs:string"/>
+  <xs:element name="TrnCampAd20" type="xs:string"/>
+  <xs:element name="TrnCampAd21" type="xs:string"/>
+  <xs:element name="TrnCampAd22" type="xs:string"/>
+  <xs:element name="TrnCampAd23" type="xs:string"/>
+  <xs:element name="TrnCampAd24" type="xs:string"/>
+  <xs:element name="TrnCampAd25" type="xs:string"/>
+  <xs:element name="TrnCampAd26" type="xs:string"/>
+  <xs:element name="TrnCampAd27" type="xs:string"/>
+  <xs:element name="TrnCampAd28" type="xs:string"/>
+  <xs:element name="TrnCampAd29" type="xs:string"/>
+  <xs:element name="TrnCampAd30" type="xs:string"/>
+  <xs:element name="TrnPaisCod" type="xs:string"/>
+  <xs:element name="TrnUltLinD" type="xs:integer"/>
+  <xs:element name="stdTWSD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:stdTWS.stdTWSCIt.stdTWSDIt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt.stdTWSDIt">
+    <xs:complexType>
+      <xs:sequence>
+		<xs:element ref="ns1:TrnLiNum"/>
+        <xs:element ref="ns1:TrnArtCod"/>
+        <xs:element ref="ns1:TrnArtNom"/>
+        <xs:element ref="ns1:TrnCan"/>
+        <xs:element ref="ns1:TrnVUn"/>
+        <xs:element ref="ns1:TrnUniMed"/>
+        <xs:element ref="ns1:TrnVDes"/>
+        <xs:element ref="ns1:TrnArtBienSer"/>
+        <xs:element ref="ns1:TrnArtExcento"/>
+        <xs:element ref="ns1:TrnDetCampAd01"/>
+        <xs:element ref="ns1:TrnDetCampAd02"/>
+        <xs:element ref="ns1:TrnDetCampAd03"/>
+        <xs:element ref="ns1:TrnDetCampAd04"/>
+        <xs:element ref="ns1:TrnDetCampAd05"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnLiNum" type="xs:integer"/>
+  <xs:element name="TrnArtCod" type="xs:string"/>
+  <xs:element name="TrnArtNom" type="xs:string"/>
+  <xs:element name="TrnCan" type="xs:decimal"/>
+  <xs:element name="TrnVUn" type="xs:decimal"/>
+  <xs:element name="TrnUniMed" type="xs:string"/>
+  <xs:element name="TrnVDes" type="xs:decimal"/>
+  <xs:element name="TrnArtBienSer" type="xs:integer"/>
+  <xs:element name="TrnArtExcento" type="xs:integer"/>
+  <xs:element name="TrnDetCampAd01" type="xs:string"/>
+  <xs:element name="TrnDetCampAd02" type="xs:string"/>
+  <xs:element name="TrnDetCampAd03" type="xs:string"/>
+  <xs:element name="TrnDetCampAd04" type="xs:string"/>
+  <xs:element name="TrnDetCampAd05" type="xs:string"/>
+  <xs:element name="stdTWSIA">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded" minOccurs="0">
+        <xs:element ref="ns1:stdTWS.stdTWSCIt.stdTWSIAIt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdTWS.stdTWSCIt.stdTWSIAIt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:TrnImpCod" maxOccurs="1" minOccurs="1"/>
+        <xs:element ref="ns1:TrnImpValor" maxOccurs="1" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TrnImpCod" type="xs:integer"/>
+  <xs:element name="TrnImpValor" type="xs:decimal"/>
+</xs:schema>
