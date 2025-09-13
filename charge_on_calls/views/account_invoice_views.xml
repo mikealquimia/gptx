@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_collection_invoice_view_form" model="ir.ui.view">
+        <field name="name">Payment Collection</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_invoice_open']" position="before">
+                <button name="action_payment_collection" id="action_payment_collection" type="object" states="open" string="Registrar Cobro" groups="charge_on_calls.user_calls" class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_payment_collections" class="oe_stat_button" icon="fa-phone" type="object" help="Llamadas de Cobros" attrs="{'invisible': [('count_payment_collection', '=', 0)]}">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="count_payment_collection" invisible="0"/></span>
+                        <span class="o_stat_text">Cobros</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

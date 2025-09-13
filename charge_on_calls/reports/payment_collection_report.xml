@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+    <record id="payment_collection_report_view_form" model="ir.ui.view">
+      <field name="name">Payment Collection Report</field>
+      <field name="model">payment.collection.report</field>
+      <field name="arch" type="xml">
+        <form string="Reporte de Cobros">
+          <sheet>
+          <div class="oe_title">
+            <h1>Reporte de Cobros</h1>
+          </div>
+          <group>
+            <field name="user_id" options="{'no_create': True}"/>
+            <field name="company_id" options="{'no_create': True}"/>
+            <field name="date_from" required="1"/>
+            <field name="date_to" required="1"/>
+          </group>
+          <notebook invisible="1">
+            <page name="name" string="string">
+              <field name="calls">
+                <tree  editable="bottom">
+                  <field name="batch"/>
+                  <field name="invoice_id"/>
+                  <field name="residual"/>
+                  <field name="date"/>
+                  <field name="user_id"/>
+                  <field name="partner_id"/>
+                  <field name="phone"/>
+                  <field name="note"/>
+                </tree>
+              </field>
+            </page>
+          </notebook>
+          </sheet>
+          <footer>
+            <button icon="fa-paste" string='Generar Reporte' name="print_report" type="object" class="btn-primary"/>
+            <button string="Cancel" class="btn-default" special="cancel"/>
+          </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="window_payment_collector_report" name="Reporte de Cobros" res_model="payment.collection.report" view_mode="form" target="new"/>
+
+    <menuitem 
+      sequence="99" 
+      name="Reporte de Cobros"
+      action="window_payment_collector_report" 
+      id="menu_payment_collector_report" 
+      parent="account.menu_finance_receivables_documents" 
+      groups="charge_on_calls.user_calls"/>
+  </data>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_payment_collection_user,payment.collection.user,model_payment_collection,charge_on_calls.user_calls,1,1,0,0
+access_payment_collection_manager,payment.collection.manager,model_payment_collection,charge_on_calls.manager_calls,1,1,1,1
+
+access_payment_collection_invoice_user,payment.collection.invoice.user,model_payment_collection_invoice,charge_on_calls.user_calls,1,1,1,1
+access_payment_collection_invoice_manager,payment.collection.invoice.manager,model_payment_collection_invoice,charge_on_calls.manager_calls,1,1,1,1

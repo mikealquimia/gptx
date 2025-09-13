@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record id="user_calls" model="res.groups">
+            <field name="name">Llamadas de Cobro</field>
+        </record>
+
+        <record id="manager_calls" model="res.groups">
+            <field name="name">Encargado de Llamadas</field>
+            <field name="implied_ids" eval="[(4, ref('user_calls'))]"/>
+        </record>
+
+        <record id="user_collection_payment_rule" model="ir.rule">
+            <field name="name">Llamadas de cobro propias</field>
+            <field ref="model_payment_collection" name="model_id"/>
+            <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('charge_on_calls.manager_calls'))]"/>
+        </record>
+
+        <record id="user_marketing_rule" model="ir.rule">
+            <field name="name">Todos los ticket de Mercadeo</field>
+            <field ref="model_payment_collection" name="model_id"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('charge_on_calls.manager_calls'))]"/>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="payment_collection_tree" model="ir.ui.view">
+            <field name="name">Payment Collection Tree View</field>
+            <field name="model">payment.collection</field>
+            <field name="arch" type="xml">
+                <tree string="Llamada de Cobro">
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <field name="partner_id"/>
+                    <field name="invoice_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="payment_collection_form" model="ir.ui.view">
+            <field name="name">Payment Collection Form View</field>
+            <field name="model">payment.collection</field>
+            <field name="arch" type="xml">
+                <form string="Llamada de Cobro">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="invoice_id" class="oe_edit_only"/>
+                            <h1><field name="invoice_id" readonly="1" required="1"/></h1>
+                        </div>
+                        <group name="parntner" string="Info Cliente">
+                            <group>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="phone" readonly="1"/>
+                                <field name="residual" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1"/>
+                                <field name="name" invisible="1"/>
+                                <field name="user_id" readonly="1"/>
+                                <field name="company_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="details" string="Detalle de Llamada">
+                                <field name="note" required="1" placeholder="Cliente indica que pagara en la fecha establecida"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="payment_collection_form" model="ir.ui.view">
+            <field name="name">Payment Collection Form View</field>
+            <field name="model">payment.collection.invoice</field>
+            <field name="arch" type="xml">
+                <form string="Llamada de Cobro">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="invoice_id" class="oe_edit_only"/>
+                            <h1><field name="invoice_id" readonly="1" required="1"/></h1>
+                        </div>
+                        <group name="parntner" string="Info Cliente">
+                            <group>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="phone" readonly="1"/>
+                                <field name="residual" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="date" readonly="1"/>
+                                <field name="name" invisible="1"/>
+                                <field name="user_id" readonly="1"/>
+                                <field name="company_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="details" string="Detalle de Llamada">
+                                <field name="note" required="1" placeholder="Cliente indica que pagara en la fecha establecida"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button icon="fa-paste" string='Crear Llamada' name="create_call" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_payment_collection" model="ir.actions.act_window">
+            <field name="res_model">payment.collection</field>
+            <field name="name">Cobros</field>
+            <field name="view_mode">tree, form</field>
+        </record>
+        
+        <menuitem id="menu_payment_collection"
+                action="act_payment_collection"
+                parent="account.menu_finance_receivables_documents"
+                groups="charge_on_calls.user_calls"
+                sequence="98"/>
+    </data>
+
+</odoo>
