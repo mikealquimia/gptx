@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="sale_receivable_report_view_form" model="ir.ui.view">
+            <field name="name">Cuentas por Cobrar</field>
+            <field name="model">sale.receivable</field>
+            <field name="arch" type="xml">
+                <form string="Sale Receivable">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Cuentas por Cobrar</h1>
+                        </div>
+                        <group>
+                            <group>
+                                <label for='date_start' string='Periodo'/>
+                                <div class="o_row">
+                                    <field name="date_start" required="1"/>-
+                                    <field name="date" required="1"/>
+                                </div>
+                                <field name="journal_ids" widget="many2many_tags" options="{'no_open': True, 'no_create': True}" domain="[('type','=','sale')]"/>
+                            </group>
+                            <group>
+                                <field name="seller_id" options="{'no_open': True, 'no_create': True}" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button icon="fa-credit-card" string='PDF' name="get_pdf" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sale_receivable_report_action" model="ir.actions.act_window">
+            <field name="name">Cuentas por Cobrar</field>
+            <field name="res_model">sale.receivable</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale_receivable_report_view_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem sequence="3" action="sale_receivable_report_action" id="menu_sale_receivable_report" parent="sale.menu_sale_report"/>
+
+</odoo>
