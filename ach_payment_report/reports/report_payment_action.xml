@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <data>
+
+                <record id="paper_cash_sale" model="report.paperformat">
+                        <field name="name">Cash Sale</field>
+                        <field name="format">Tabloid</field>
+                        <field name="orientation">Landscape</field>
+                </record>
+
+                <report
+                        id="action_pdf_cash_sale"
+                        string="Cash Sale"
+                        model="cash.sale"
+                        report_type="qweb-pdf"
+                        file="ach_payment_report.payment_report"
+                        name="ach_payment_report.payment_report"
+                        print_report_name="'Cash Sale: %s' % (object.date)"
+                        paperformat="ach_payment_report.paper_cash_sale"
+                        />
+
+        </data>
+</odoo>
