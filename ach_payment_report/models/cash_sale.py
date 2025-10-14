@@ -138,10 +138,10 @@ left join (
     group by ai.number, ai.id 
 	) as xinvoices 
 on xinvoices.id = aisor.account_invoice_id 
-where so.confirmation_date between %s and %s 
+where so.confirmation_date between %s and %s and so.company_id = %s 
 group by so.name, rp.name, so.amount_total 
 order by so.name; """
-        params = (date_q, date_q, date_q, date_q, tuple(journals), date_q, date_q, tuple(journals), date_q_start, date_q_stop)
+        params = (date_q, date_q, date_q, date_q, tuple(journals), date_q, date_q, tuple(journals), date_q_start, date_q_stop, self.company_id.id)
         self.env.cr.execute(query, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -207,9 +207,9 @@ inner join account_invoice_sale_order_rel aisor
 on aisor.account_invoice_id = ai.id 
 inner join sale_order so 
 on so.id = aisor.sale_order_id and so.confirmation_date < %s 
-where ai.date_invoice = %s and ai.journal_id in %s and apx.amount is null 
+where ai.date_invoice = %s and ai.journal_id in %s and apx.amount is null  and ai.company_id = %s 
 group by ai.number, ai.amount_total_signed, rp.name """
-        params = (date_q, date_q_start, date_q, tuple(journals))
+        params = (date_q, date_q_start, date_q, tuple(journals), self.company_id.id)
         self.env.cr.execute(query, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -307,12 +307,12 @@ inner join account_invoice_sale_order_rel aisor
 on aisor.account_invoice_id = ai.id 
 inner join sale_order so 
 on so.id = aisor.sale_order_id and so.confirmation_date < %s 
-where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid')
+where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid') and ai.company_id = %s 
 group by ai.number 
 having sum(apx.amount) < sum(ai.amount_total_signed) and sum(xxaipr.amount) > 0 
 and count(aisor.account_invoice_id)=1 
 """
-        params = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals))
+        params = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals), self.company_id.id)
         self.env.cr.execute(query, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -389,12 +389,12 @@ inner join account_invoice_sale_order_rel aisor
 on aisor.account_invoice_id = ai.id 
 inner join sale_order so 
 on so.id = aisor.sale_order_id and so.confirmation_date < %s 
-where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid')
+where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid') and ai.company_id = %s 
 group by ai.number 
 having sum(apx.amount) < sum(ai.amount_total_signed) and sum(xxaipr.amount) > 0 
 and count(aisor.account_invoice_id)>1 
 """
-        params2 = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals))
+        params2 = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals), self.company_id.id)
         self.env.cr.execute(query2, params2)
         for line2 in self.env.cr.dictfetchall():
             vals = {
@@ -497,11 +497,11 @@ inner join account_invoice_sale_order_rel aisor
 on aisor.account_invoice_id = ai.id 
 inner join sale_order so 
 on so.id = aisor.sale_order_id and so.confirmation_date < %s 
-where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid')
+where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid') and ai.company_id = %s 
 group by ai.number 
 having sum(apx.amount) = sum(ai.amount_total_signed) and sum(xxaipr.amount) > 0 
 and count(aisor.account_invoice_id)=1 """
-        params = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals))
+        params = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals), self.company_id.id)
         self.env.cr.execute(query, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -578,11 +578,11 @@ inner join account_invoice_sale_order_rel aisor
 on aisor.account_invoice_id = ai.id 
 inner join sale_order so 
 on so.id = aisor.sale_order_id and so.confirmation_date < %s 
-where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid')
+where ai.date_invoice <= %s and ai.journal_id in %s and ai.state in ('open','in_payment','paid') and ai.company_id = %s 
 group by ai.number 
 having sum(apx.amount) = sum(ai.amount_total_signed) and sum(xxaipr.amount) > 0 
 and count(aisor.account_invoice_id)>1 """
-        params2 = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals))
+        params2 = (date_q, date_q, date_q, date_q, date_q_start, date_q, tuple(journals), self.company_id.id)
         self.env.cr.execute(query2, params2)
         for line2 in self.env.cr.dictfetchall():
             vals = {
@@ -637,12 +637,12 @@ inner join (
 	on ai.id = aipr.invoice_id and ai.state in ('open','in_payment','paid')
 	inner join account_journal aj2 
 	on aj2.id = ai.journal_id and aj2.id in %s 
-	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') 
+	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') and ap2.company_id = %s 
 	group by ap2.journal_id 
 ) as ap 
 on aj.id = ap.journal_id 
 group by aj.name, ap.amount, aj.commission """
-        params = (tuple(journals),date_q)
+        params = (tuple(journals),date_q, self.company_id.id)
         self.env.cr.execute(query, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -698,13 +698,13 @@ inner join (
 	on so.id = aisor.sale_order_id 
 	inner join account_journal aj2 
 	on aj2.id = ai.journal_id and aj2.id in %s 
-	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') 
+	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') and ap2.company_id = %s 
 	group by ap2.journal_id, ap2.payment_date_real, ap2.amount 
 ) as ap 
 on aj.id = ap.journal_id 
 where aj.resum_report = true 
 group by aj.name, aj.commission, ap.payment_date_real """
-        params = (tuple(journals),date_q)
+        params = (tuple(journals),date_q, self.company_id.id)
         self.env.cr.execute(query_resum, params)
         for line in self.env.cr.dictfetchall():
             vals = {
@@ -737,13 +737,13 @@ inner join (
 	on so.id = aisor.sale_order_id 
 	inner join account_journal aj2 
 	on aj2.id = ai.journal_id and aj2.id in %s 
-	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') 
+	where ap2.payment_date = %s and ap2.state in ('posted','sent','reconciled') and ap2.company_id = %s 
 	group by ap2.journal_id, ap2.payment_date_real, ap2.deposit_number 
 ) as ap 
 on aj.id = ap.journal_id 
 where aj.resum_report is null 
 group by aj.name, ap.amount, aj.commission, ap.payment_date_real, ap.description"""
-        params_no = (tuple(journals),date_q)
+        params_no = (tuple(journals),date_q, self.company_id.id)
         self.env.cr.execute(query_no_resum, params_no)
         for line in self.env.cr.dictfetchall():
             vals = {
